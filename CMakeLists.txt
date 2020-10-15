@@ -39,7 +39,8 @@ endif ()
 
 add_executable(OctoWorld
         src/Main.cpp
-        src/States/DebugState.cpp)
+        src/States/DebugState.cpp
+        src/World/World.cpp)
 
 add_custom_command(TARGET OctoWorld PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E create_symlink

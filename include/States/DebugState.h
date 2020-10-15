@@ -9,22 +9,28 @@
 #include <GUI/Panel.h>
 #include <State/State.h>
 #include <GLFW/glfw3.h>
+#include <World/World.h>
 
-class DebugState : public CGE::State::State
+namespace OW
 {
 
-public:
-    virtual void tick() override;
+    class DebugState : public CGE::State::State
+    {
 
-    virtual void draw() override;
+        World world;
 
-    DebugState();
+    public:
+        virtual void tick() override;
 
-private:
+        virtual void draw() override;
 
-    CGE::GUI::Panel *pausePanel;
+        DebugState();
 
-    void keyCallback(GLFWwindow *window, int key, int action);
-};
+    private:
 
+        CGE::GUI::Panel *pausePanel;
 
+        void keyCallback(GLFWwindow *window, int key, int action);
+    };
+
+}

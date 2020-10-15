@@ -13,7 +13,7 @@ void init()
     initEngine("Octo World", IO::DEFAULT_WIDTH, IO::DEFAULT_HEIGHT, false);
     GUI::Text::TextRenderer::init("res/graphics/fonts/Archivo-Regular.ttf");
     Utils::TPSClock::init();
-    State::StateManager::constructAndSetCurrentState<DebugState>();
+    State::StateManager::constructAndSetCurrentState<OW::DebugState>();
 }
 
 void loopTick()
